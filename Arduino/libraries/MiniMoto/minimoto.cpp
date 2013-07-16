@@ -2,7 +2,7 @@
 #include "minimoto.h"
 
 // The address of the part is set by a jumper on the board. 
-//  See datasheet or schematic for details; default is 0xCC.
+//  See datasheet or schematic for details; default is 0xD0.
 MiniMoto::MiniMoto(byte addr)
 {
   _addr = addr;
