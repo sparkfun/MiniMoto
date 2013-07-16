@@ -30,8 +30,9 @@
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
-<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
 <layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
@@ -55,7 +56,6 @@
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
-<layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
@@ -150,7 +150,7 @@
 <text x="2.54" y="10.16" size="0.8128" layer="22" font="vector" ratio="15" rot="MR0" align="bottom-center">VCC</text>
 <text x="10.033" y="23.241" size="1.27" layer="21" font="vector" ratio="15" align="bottom-center">MiniMoto</text>
 <text x="21.336" y="13.97" size="1.27" layer="22" font="vector" ratio="15" rot="MR90" align="bottom-center">MiniMoto</text>
-<text x="1.905" y="15.748" size="1.27" layer="1" font="vector" ratio="15" rot="R90" align="bottom-center">v01</text>
+<text x="1.905" y="15.748" size="1.27" layer="1" font="vector" ratio="15" rot="R90" align="bottom-center">v10</text>
 <circle x="2.54" y="22.86" radius="3.048" width="0.254" layer="41"/>
 <circle x="22.86" y="22.86" radius="3.048" width="0.254" layer="41"/>
 <circle x="22.86" y="2.54" radius="3.048" width="0.254" layer="41"/>
@@ -885,25 +885,6 @@ design rules under a new name.</description>
 <wire x1="22.0472" y1="16.4728" x2="22.01" y2="16.51" width="0.254" layer="1"/>
 </signal>
 </signals>
-<errors>
-<approved hash="3,1,d5222b299e86608d"/>
-<approved hash="1,20,237d4b414b63235f"/>
-<approved hash="19,1,41f679a928bffb66"/>
-<approved hash="19,1,480e2afa271845ec"/>
-<approved hash="19,1,39cee2f412f82244"/>
-<approved hash="5,1,98ee09114ab0e3ae"/>
-<approved hash="5,1,cc703670b5970830"/>
-<approved hash="5,1,7d738770b7970a33"/>
-<approved hash="5,1,29edb81148b0e1ad"/>
-<approved hash="5,1,a6f337114ab0e3b3"/>
-<approved hash="5,1,f26d0870b597082d"/>
-<approved hash="5,1,63689970b3970e28"/>
-<approved hash="5,1,37f6a6114cb0e5b6"/>
-<approved hash="5,1,1b3c11a5532cbd02"/>
-<approved hash="5,1,7a72054c268bdc44"/>
-<approved hash="5,1,2b3c21b96b308502"/>
-<approved hash="5,1,4a7235501e97e444"/>
-</errors>
 </board>
 </drawing>
 </eagle>

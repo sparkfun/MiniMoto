@@ -6469,12 +6469,12 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <sheet>
 <plain>
 <text x="172.72" y="7.62" size="3.81" layer="91">M. Hord</text>
-<text x="239.522" y="6.858" size="3.81" layer="91">01</text>
-<text x="12.7" y="175.26" size="3.81" layer="94">If JP2 is LOW...</text>
-<text x="66.04" y="160.782" size="3.81" layer="94" rot="R90">HIGH</text>
-<text x="45.72" y="160.782" size="3.81" layer="94" rot="R90">LOW</text>
-<text x="55.88" y="160.782" size="3.81" layer="94" rot="R90">OPEN</text>
-<text x="12.7" y="160.274" size="3.81" layer="94">...and
+<text x="239.522" y="6.858" size="3.81" layer="91">10</text>
+<text x="12.7" y="175.26" size="3.175" layer="94">If JP2 is LOW...</text>
+<text x="66.04" y="160.782" size="3.175" layer="94" rot="R90">HIGH</text>
+<text x="45.72" y="160.782" size="3.175" layer="94" rot="R90">LOW</text>
+<text x="55.88" y="160.782" size="3.175" layer="94" rot="R90">OPEN</text>
+<text x="12.7" y="160.274" size="3.175" layer="94">...and
 JP1 is...</text>
 <wire x1="38.1" y1="160.02" x2="38.1" y2="144.78" width="0.1524" layer="94"/>
 <wire x1="68.58" y1="144.78" x2="68.58" y2="160.02" width="0.1524" layer="94"/>
@@ -6483,11 +6483,11 @@ JP1 is...</text>
 <wire x1="48.26" y1="160.02" x2="38.1" y2="160.02" width="0.1524" layer="94"/>
 <wire x1="48.26" y1="160.02" x2="48.26" y2="144.78" width="0.1524" layer="94"/>
 <wire x1="58.42" y1="144.78" x2="58.42" y2="160.02" width="0.1524" layer="94"/>
-<text x="2.54" y="147.32" size="3.81" layer="94">...the I2C
+<text x="2.54" y="147.32" size="3.175" layer="94">...the I2C
 address is:</text>
-<text x="44.958" y="146.05" size="3.81" layer="94" rot="R90">0xC0</text>
-<text x="55.118" y="146.05" size="3.81" layer="94" rot="R90">0xC2</text>
-<text x="65.278" y="146.05" size="3.81" layer="94" rot="R90">0xC4</text>
+<text x="44.958" y="146.05" size="3.175" layer="94" rot="R90">0xC0</text>
+<text x="55.118" y="146.05" size="3.175" layer="94" rot="R90">0xC2</text>
+<text x="65.278" y="146.05" size="3.175" layer="94" rot="R90">0xC4</text>
 <wire x1="38.1" y1="144.78" x2="38.1" y2="129.54" width="0.1524" layer="94"/>
 <wire x1="38.1" y1="129.54" x2="48.26" y2="129.54" width="0.1524" layer="94"/>
 <wire x1="58.42" y1="129.54" x2="68.58" y2="129.54" width="0.1524" layer="94"/>
@@ -6498,16 +6498,16 @@ address is:</text>
 <wire x1="48.26" y1="144.78" x2="48.26" y2="129.54" width="0.1524" layer="94"/>
 <wire x1="48.26" y1="129.54" x2="58.42" y2="129.54" width="0.1524" layer="94"/>
 <wire x1="58.42" y1="129.54" x2="58.42" y2="144.78" width="0.1524" layer="94"/>
-<text x="44.958" y="130.81" size="3.81" layer="94" rot="R90">0xC1</text>
-<text x="55.118" y="130.81" size="3.81" layer="94" rot="R90">0xC3</text>
-<text x="65.278" y="130.81" size="3.81" layer="94" rot="R90">0xC5</text>
-<text x="73.66" y="144.78" size="3.81" layer="94" rot="R90">WRITE</text>
-<text x="73.66" y="129.54" size="3.81" layer="94" rot="R90">READ</text>
-<text x="12.7" y="121.92" size="3.81" layer="94">If JP2 is OPEN...</text>
-<text x="66.04" y="107.442" size="3.81" layer="94" rot="R90">HIGH</text>
-<text x="45.72" y="107.442" size="3.81" layer="94" rot="R90">LOW</text>
-<text x="55.88" y="107.442" size="3.81" layer="94" rot="R90">OPEN</text>
-<text x="12.7" y="106.934" size="3.81" layer="94">...and
+<text x="44.958" y="130.81" size="3.175" layer="94" rot="R90">0xC1</text>
+<text x="55.118" y="130.81" size="3.175" layer="94" rot="R90">0xC3</text>
+<text x="65.278" y="130.81" size="3.175" layer="94" rot="R90">0xC5</text>
+<text x="73.66" y="144.78" size="3.175" layer="94" rot="R90">WRITE</text>
+<text x="73.66" y="129.54" size="3.175" layer="94" rot="R90">READ</text>
+<text x="12.7" y="121.92" size="3.175" layer="94">If JP2 is OPEN...</text>
+<text x="66.04" y="107.442" size="3.175" layer="94" rot="R90">HIGH</text>
+<text x="45.72" y="107.442" size="3.175" layer="94" rot="R90">LOW</text>
+<text x="55.88" y="107.442" size="3.175" layer="94" rot="R90">OPEN</text>
+<text x="12.7" y="106.934" size="3.175" layer="94">...and
 JP1 is...</text>
 <wire x1="38.1" y1="106.68" x2="38.1" y2="91.44" width="0.1524" layer="94"/>
 <wire x1="68.58" y1="91.44" x2="68.58" y2="106.68" width="0.1524" layer="94"/>
@@ -6516,11 +6516,11 @@ JP1 is...</text>
 <wire x1="48.26" y1="106.68" x2="38.1" y2="106.68" width="0.1524" layer="94"/>
 <wire x1="48.26" y1="106.68" x2="48.26" y2="91.44" width="0.1524" layer="94"/>
 <wire x1="58.42" y1="91.44" x2="58.42" y2="106.68" width="0.1524" layer="94"/>
-<text x="2.54" y="93.98" size="3.81" layer="94">...the I2C
+<text x="2.54" y="93.98" size="3.175" layer="94">...the I2C
 address is:</text>
-<text x="44.958" y="92.71" size="3.81" layer="94" rot="R90">0xC6</text>
-<text x="55.118" y="92.71" size="3.81" layer="94" rot="R90">0xC8</text>
-<text x="65.278" y="92.71" size="3.81" layer="94" rot="R90">0xCA</text>
+<text x="44.958" y="92.71" size="3.175" layer="94" rot="R90">0xC6</text>
+<text x="55.118" y="92.71" size="3.175" layer="94" rot="R90">0xC8</text>
+<text x="65.278" y="92.71" size="3.175" layer="94" rot="R90">0xCA</text>
 <wire x1="38.1" y1="91.44" x2="38.1" y2="76.2" width="0.1524" layer="94"/>
 <wire x1="38.1" y1="76.2" x2="48.26" y2="76.2" width="0.1524" layer="94"/>
 <wire x1="58.42" y1="76.2" x2="68.58" y2="76.2" width="0.1524" layer="94"/>
@@ -6531,16 +6531,16 @@ address is:</text>
 <wire x1="48.26" y1="91.44" x2="48.26" y2="76.2" width="0.1524" layer="94"/>
 <wire x1="48.26" y1="76.2" x2="58.42" y2="76.2" width="0.1524" layer="94"/>
 <wire x1="58.42" y1="76.2" x2="58.42" y2="91.44" width="0.1524" layer="94"/>
-<text x="44.958" y="77.47" size="3.81" layer="94" rot="R90">0xC7</text>
-<text x="55.118" y="77.47" size="3.81" layer="94" rot="R90">0xC9</text>
-<text x="65.278" y="77.47" size="3.81" layer="94" rot="R90">0xCB</text>
-<text x="73.66" y="91.44" size="3.81" layer="94" rot="R90">WRITE</text>
-<text x="73.66" y="76.2" size="3.81" layer="94" rot="R90">READ</text>
-<text x="12.7" y="68.58" size="3.81" layer="94">If JP2 is HIGH...</text>
-<text x="66.04" y="54.102" size="3.81" layer="94" rot="R90">HIGH</text>
-<text x="45.72" y="54.102" size="3.81" layer="94" rot="R90">LOW</text>
-<text x="55.88" y="54.102" size="3.81" layer="94" rot="R90">OPEN</text>
-<text x="12.7" y="53.594" size="3.81" layer="94">...and
+<text x="44.958" y="77.47" size="3.175" layer="94" rot="R90">0xC7</text>
+<text x="55.118" y="77.47" size="3.175" layer="94" rot="R90">0xC9</text>
+<text x="65.278" y="77.47" size="3.175" layer="94" rot="R90">0xCB</text>
+<text x="73.66" y="91.44" size="3.175" layer="94" rot="R90">WRITE</text>
+<text x="73.66" y="76.2" size="3.175" layer="94" rot="R90">READ</text>
+<text x="12.7" y="68.58" size="3.175" layer="94">If JP2 is HIGH...</text>
+<text x="66.04" y="54.102" size="3.175" layer="94" rot="R90">HIGH</text>
+<text x="45.72" y="54.102" size="3.175" layer="94" rot="R90">LOW</text>
+<text x="55.88" y="54.102" size="3.175" layer="94" rot="R90">OPEN</text>
+<text x="12.7" y="53.594" size="3.175" layer="94">...and
 JP1 is...</text>
 <wire x1="38.1" y1="53.34" x2="38.1" y2="38.1" width="0.1524" layer="94"/>
 <wire x1="68.58" y1="38.1" x2="68.58" y2="53.34" width="0.1524" layer="94"/>
@@ -6549,11 +6549,11 @@ JP1 is...</text>
 <wire x1="48.26" y1="53.34" x2="38.1" y2="53.34" width="0.1524" layer="94"/>
 <wire x1="48.26" y1="53.34" x2="48.26" y2="38.1" width="0.1524" layer="94"/>
 <wire x1="58.42" y1="38.1" x2="58.42" y2="53.34" width="0.1524" layer="94"/>
-<text x="2.54" y="40.64" size="3.81" layer="94">...the I2C
+<text x="2.54" y="40.64" size="3.175" layer="94">...the I2C
 address is:</text>
-<text x="44.958" y="39.37" size="3.81" layer="94" rot="R90">0xCC</text>
-<text x="55.118" y="39.37" size="3.81" layer="94" rot="R90">0xCE</text>
-<text x="65.278" y="39.37" size="3.81" layer="94" rot="R90">0xD0</text>
+<text x="44.958" y="39.37" size="3.175" layer="94" rot="R90">0xCC</text>
+<text x="55.118" y="39.37" size="3.175" layer="94" rot="R90">0xCE</text>
+<text x="65.278" y="39.37" size="3.175" layer="94" rot="R90">0xD0</text>
 <wire x1="38.1" y1="38.1" x2="38.1" y2="22.86" width="0.1524" layer="94"/>
 <wire x1="38.1" y1="22.86" x2="48.26" y2="22.86" width="0.1524" layer="94"/>
 <wire x1="58.42" y1="22.86" x2="68.58" y2="22.86" width="0.1524" layer="94"/>
@@ -6564,11 +6564,11 @@ address is:</text>
 <wire x1="48.26" y1="38.1" x2="48.26" y2="22.86" width="0.1524" layer="94"/>
 <wire x1="48.26" y1="22.86" x2="58.42" y2="22.86" width="0.1524" layer="94"/>
 <wire x1="58.42" y1="22.86" x2="58.42" y2="38.1" width="0.1524" layer="94"/>
-<text x="44.958" y="24.13" size="3.81" layer="94" rot="R90">0xCD</text>
-<text x="55.118" y="24.13" size="3.81" layer="94" rot="R90">0xCF</text>
-<text x="65.278" y="24.13" size="3.81" layer="94" rot="R90">0xD1</text>
-<text x="73.66" y="38.1" size="3.81" layer="94" rot="R90">WRITE</text>
-<text x="73.66" y="22.86" size="3.81" layer="94" rot="R90">READ</text>
+<text x="44.958" y="24.13" size="3.175" layer="94" rot="R90">0xCD</text>
+<text x="55.118" y="24.13" size="3.175" layer="94" rot="R90">0xCF</text>
+<text x="65.278" y="24.13" size="3.175" layer="94" rot="R90">0xD1</text>
+<text x="73.66" y="38.1" size="3.175" layer="94" rot="R90">WRITE</text>
+<text x="73.66" y="22.86" size="3.175" layer="94" rot="R90">READ</text>
 <text x="203.2" y="76.2" size="1.778" layer="94">R3 sets current limit</text>
 <text x="208.28" y="71.12" size="1.778" layer="94">R</text>
 <text x="209.804" y="70.612" size="1.016" layer="94">SENSE</text>
@@ -6582,6 +6582,15 @@ Signals</text>
 <text x="167.64" y="139.7" size="1.778" layer="94">Power Input</text>
 <text x="208.28" y="139.7" size="1.778" layer="94">Output</text>
 <text x="88.9" y="129.54" size="1.778" layer="94">I2C Address Jumpers</text>
+<text x="88.9" y="121.92" size="2.54" layer="94">Default: High/High
+0xD0/0xD1</text>
+<wire x1="106.68" y1="160.02" x2="109.22" y2="160.02" width="0.1524" layer="94"/>
+<wire x1="109.22" y1="160.02" x2="109.22" y2="157.48" width="0.1524" layer="94"/>
+<wire x1="109.22" y1="157.48" x2="106.68" y2="157.48" width="0.1524" layer="94"/>
+<wire x1="106.68" y1="147.32" x2="109.22" y2="147.32" width="0.1524" layer="94"/>
+<wire x1="109.22" y1="147.32" x2="109.22" y2="144.78" width="0.1524" layer="94"/>
+<wire x1="109.22" y1="144.78" x2="106.68" y2="144.78" width="0.1524" layer="94"/>
+<text x="203.2" y="63.5" size="2.54" layer="94">Default: 910mA</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
