@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="6.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -6591,6 +6591,10 @@ Signals</text>
 <wire x1="109.22" y1="147.32" x2="109.22" y2="144.78" width="0.1524" layer="94"/>
 <wire x1="109.22" y1="144.78" x2="106.68" y2="144.78" width="0.1524" layer="94"/>
 <text x="203.2" y="63.5" size="2.54" layer="94">Default: 910mA</text>
+<wire x1="0" y1="73.66" x2="83.82" y2="73.66" width="0.1524" layer="94" style="longdash"/>
+<wire x1="0" y1="127" x2="83.82" y2="127" width="0.1524" layer="94" style="longdash"/>
+<wire x1="83.82" y1="127" x2="83.82" y2="0" width="0.1524" layer="94" style="longdash"/>
+<wire x1="83.82" y1="127" x2="83.82" y2="185.42" width="0.1524" layer="94" style="longdash"/>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>

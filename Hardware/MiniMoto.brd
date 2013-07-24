@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="6.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -666,8 +666,8 @@ design rules under a new name.</description>
 </autorouter>
 <elements>
 <element name="FRAME1" library="SparkFun-Aesthetics" package="CREATIVE_COMMONS" value="FRAME-LETTER" x="-77.47" y="11.43"/>
-<element name="R1" library="SparkFun-Resistors" package="0603-RES" value="1K" x="19.05" y="7.62" rot="R90">
-<attribute name="PROD_ID" value="RES-07856" x="48.26" y="50.8" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="R1" library="SparkFun-Resistors" package="0603-RES" value="1K" x="18.796" y="7.62" rot="R90">
+<attribute name="PROD_ID" value="RES-07856" x="48.006" y="50.8" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="R2" library="SparkFun-Resistors" package="0603-RES" value="1K" x="20.32" y="7.62" rot="R90">
 <attribute name="PROD_ID" value="RES-07856" x="49.53" y="54.61" size="1.778" layer="27" rot="R90" display="off"/>
@@ -779,13 +779,13 @@ design rules under a new name.</description>
 <contactref element="U1" pad="10"/>
 <contactref element="J7" pad="5"/>
 <contactref element="J7" pad="6"/>
-<wire x1="19.05" y1="6.77" x2="19.05" y2="5.461" width="0.254" layer="1"/>
-<wire x1="19.05" y1="5.461" x2="18.796" y2="5.207" width="0.254" layer="1"/>
-<wire x1="18.796" y1="5.207" x2="15.367" y2="5.207" width="0.254" layer="1"/>
+<wire x1="18.796" y1="6.77" x2="18.796" y2="5.461" width="0.254" layer="1"/>
+<wire x1="18.796" y1="5.461" x2="18.542" y2="5.207" width="0.254" layer="1"/>
+<wire x1="18.542" y1="5.207" x2="15.367" y2="5.207" width="0.254" layer="1"/>
 <wire x1="15.367" y1="5.207" x2="15.24" y2="5.08" width="0.254" layer="1"/>
 <wire x1="17.51" y1="9.3205" x2="17.51" y2="7.128" width="0.254" layer="1"/>
 <wire x1="17.51" y1="7.128" x2="17.868" y2="6.77" width="0.254" layer="1"/>
-<wire x1="19.05" y1="6.77" x2="17.868" y2="6.77" width="0.254" layer="1"/>
+<wire x1="18.796" y1="6.77" x2="17.868" y2="6.77" width="0.254" layer="1"/>
 <wire x1="15.24" y1="5.08" x2="15.24" y2="3.81" width="0.254" layer="1"/>
 <wire x1="15.24" y1="3.81" x2="15.24" y2="1.27" width="0.254" layer="1"/>
 </signal>
