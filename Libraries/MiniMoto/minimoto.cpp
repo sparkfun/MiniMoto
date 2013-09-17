@@ -10,8 +10,16 @@ MiniMoto::MiniMoto(byte addr)
   // This sets the bit rate of the bus; I want 100kHz. See the
   //  datasheet for details on how I came up with this value.
   TWBR = 72;
-  
-  
+}
+
+// Return the fault status of the DRV8830 chip. Also clears any existing faults.
+byte MiniMoto::getFault()
+{
+  byte buffer = 0;
+  byte clearFault = 0x80;
+  I2CReadBytes(0x01, &buffer, 1);
+  I2CWriteBytes(0x01, &clearFault, 1);
+  return buffer;
 }
 
 // Send the drive command over I2C to the DRV8830 chip. Bits 7:2 are the speed
@@ -22,14 +30,18 @@ MiniMoto::MiniMoto(byte addr)
 //  - 11 = H-H (brake)
 void MiniMoto::drive(int speed)
 {
-  byte regValue = 0;                // Set up a clear byte for the command.
+  byte regValue = 0x80;             // Before we do anything, we'll want to
+                                    //  clear the fault status. To do that
+                                    //  write 0x80 to register 0x01 on the
+                                    //  DRV8830.
+  I2CWriteBytes(0x01, &regValue, 1); // Clear the fault status.
   regValue = (byte)abs(speed);      // Find the byte-ish abs value of the input
   if (regValue > 63) regValue = 63; // Cap the value at 63.
   regValue = regValue<<2;           // Left shift to make room for bits 1:0
   if (speed < 0) regValue |= 0x01;  // Set bits 1:0 based on sign of input.
   else           regValue |= 0x02;
   
-  xlWriteBytes(0x00, &regValue, 1);  
+  I2CWriteBytes(0x00, &regValue, 1);  
 }
 
 // Coast to a stop by hi-z'ing the drivers.
@@ -37,7 +49,7 @@ void MiniMoto::stop()
 {
   byte regValue = 0;                // See above for bit 1:0 explanation.
   
-  xlWriteBytes(0x00, &regValue, 1); 
+  I2CWriteBytes(0x00, &regValue, 1); 
 }
 
 // Stop the motor by providing a heavy load on it.
@@ -45,11 +57,11 @@ void MiniMoto::brake()
 {
   byte regValue = 0x03;                // See above for bit 1:0 explanation.
   
-  xlWriteBytes(0x00, &regValue, 1); 
+  I2CWriteBytes(0x00, &regValue, 1); 
 }
 
 // Private function that reads some number of bytes from the accelerometer.
-void MiniMoto::xlReadBytes(byte addr, byte *buffer, byte len)
+void MiniMoto::I2CReadBytes(byte addr, byte *buffer, byte len)
 {
   byte temp = 0;
   // First, we need to write the address we want to read from, so issue a write
@@ -96,7 +108,7 @@ void MiniMoto::xlReadBytes(byte addr, byte *buffer, byte len)
   TWCR = STOP_COND;
 }
 
-void MiniMoto::xlWriteBytes(byte addr, byte *buffer, byte len)
+void MiniMoto::I2CWriteBytes(byte addr, byte *buffer, byte len)
 {
   // First, we need to write the address we want to read from, so issue a write
   //  with that address. That's two steps: first, the slave address:
