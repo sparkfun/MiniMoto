@@ -1,22 +1,25 @@
 #ifndef minimoto_h
 #define minimoto_h
 
-#include <Arduino.h>
+#if defined(ARDUINO) && ARDUINO >= 100
+ #include "Arduino.h"
+#else
+ #include "WProgram.h"
+#endif
 
-// I2C support constants
-#define I2C_READ    0x01 // I2C read bit set
-// Some values we'll load into TWCR a lot
-#define START_COND  0xA4 // (1<<TWINT) | (1<<TWSTA) | (1<<TWEN)
-#define STOP_COND   0x94 // (1<<TWINT) | (1<<TWSTO) | (1<<TWEN)
-#define CLEAR_TWINT 0x84 // (1<<TWINT) | (1<<TWEN)
-#define NEXT_BYTE   0xC4 // (1<<TWINT) | (1<<TWEA) | (1<<TWEN)
+#include <Wire.h>
 
-// Fault constants
-#define FAULT 0x01
-#define ILIMIT 0x10
-#define OTS 0x08
-#define UVLO 0x04
-#define OCP 0x02
+//Define registers
+#define REG_CONTROL 0x00
+#define REG_FAULT 0x01
+
+//Fault bit constants
+#define CLEAR 7
+#define ILIMIT 4
+#define OTS 3
+#define UVLO 2
+#define OCP 1
+#define FAULT 0
 
 class MiniMoto
 {
@@ -27,9 +30,7 @@ class MiniMoto
     void brake();
     byte getFault();
   private:
-    void I2CWriteBytes(byte addr, byte *buffer, byte len);
-    void I2CReadBytes(byte addr, byte *buffer, byte len);
-    byte _addr;
+    int _addr;
 };
 
 #endif
