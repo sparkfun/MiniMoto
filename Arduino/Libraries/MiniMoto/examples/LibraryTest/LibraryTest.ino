@@ -7,7 +7,10 @@ This code is beerware; if you use it, please buy me (or any other
 SparkFun employee) a cold beverage next time you run into one of
 us at the local.
 
+Updated Version : Include methods for preventing brownouts caused by
+excessive motor currents. 
 17 Sep 2013- Mike Hord, SparkFun Electronics
+31 Dec 2014- Ed Wilson, Electronics Engineer
 
 Code developed in Arduino 1.0.5, on a Fio classic board.
 ****************************************************************/
@@ -16,6 +19,7 @@ Code developed in Arduino 1.0.5, on a Fio classic board.
 
 // Create two MiniMoto instances, with different address settings.
 MiniMoto motor0(0xCE); // A1 = 1, A0 = clear
+//MiniMoto motor0(0xCE,50); // has the same effect as line 33
 MiniMoto motor1(0xD0); // A1 = 1, A0 = 1 (default)
 
 #define FAULTn  16     // Pin used for fault detection.
@@ -25,6 +29,8 @@ MiniMoto motor1(0xD0); // A1 = 1, A0 = 1 (default)
 //  pin as an input.
 void setup()
 {
+
+  // motor0.setStopTime(50); // will cause the library to send a stop command before issuing a new drive command with a delay between the two of 50ms
   Serial.begin(9600);
   Serial.println("Hello, world!");
   pinMode(FAULTn, INPUT);

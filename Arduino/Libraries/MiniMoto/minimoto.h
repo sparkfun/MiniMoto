@@ -18,18 +18,27 @@
 #define UVLO 0x04
 #define OCP 0x02
 
+/* 
+  Controls if there is a stop period between changing motor speed and/or direction
+  Useful if you are suffering from brownouts due to excessive current
+*/
+#define  StopTimeEnable 1
+
 class MiniMoto
 {
   public:
-    MiniMoto(byte addr);
+    MiniMoto(byte addr, byte stopTime = 0);
     void drive(int speed);
     void stop();
     void brake();
     byte getFault();
+    void setStopTime(byte time);
+    byte getStopTime();
   private:
     void I2CWriteBytes(byte addr, byte *buffer, byte len);
     void I2CReadBytes(byte addr, byte *buffer, byte len);
     byte _addr;
+    byte _stopTime;
 };
 
 #endif

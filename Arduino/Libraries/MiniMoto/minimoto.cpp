@@ -1,12 +1,10 @@
 #include <Arduino.h>
 #include "minimoto.h"
 
-// The address of the part is set by a jumper on the board. 
-//  See datasheet or schematic for details; default is 0xD0.
-MiniMoto::MiniMoto(byte addr)
+MiniMoto::MiniMoto(byte addr, byte stopTime)
 {
   _addr = addr;
-  
+  _stopTime = stopTime;
   // This sets the bit rate of the bus; I want 100kHz. See the
   //  datasheet for details on how I came up with this value.
   TWBR = 72;
@@ -41,6 +39,16 @@ void MiniMoto::drive(int speed)
   if (speed < 0) regValue |= 0x01;  // Set bits 1:0 based on sign of input.
   else           regValue |= 0x02;
   
+ /*
+  Condition block below allows for compile time or runtime enable and disable of stop time (use to prevent brownouts)
+  Use setStopTime to set a time in milliseconds. The driver will be sent the stop command and will then wait for that
+  period of time before the drive command is sent. This is useful when you have issues with brownout due to excessive 
+  motor currents. 
+*/
+  if(StopTimeEnable && _stopTime > 0){
+    stop(); // added EW 201412311116 to prevent brownout
+    delay(_stopTime); // added EW 201412311116 to prevent brownout
+  }
   I2CWriteBytes(0x00, &regValue, 1);  
 }
 
@@ -60,10 +68,28 @@ void MiniMoto::brake()
   I2CWriteBytes(0x00, &regValue, 1); 
 }
 
+/* Set stop time
+  Set the delay in milliseconds between stopping the motor and the next drive commanding being sent
+*/
+void MiniMoto::setStopTime(byte time)
+{
+	_stopTime = time;  
+}
+
+/*
+ Get stop time (purely for completeness)
+ Get the value of _stopTime, the time period between stopping the motor and the next drive command being sent
+ This method is purely for completeness and has no real use.  
+*/
+byte MiniMoto::getStopTime(){
+	return _stopTime;
+}
+
+
+
 // Private function that reads some number of bytes from the accelerometer.
 void MiniMoto::I2CReadBytes(byte addr, byte *buffer, byte len)
 {
-  byte temp = 0;
   // First, we need to write the address we want to read from, so issue a write
   //  with that address. That's two steps: first, the slave address:
   TWCR = START_COND;          // Send a start condition         
